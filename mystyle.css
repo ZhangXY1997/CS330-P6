@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+    background: #5e42a6;
+    color: #434242;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*sideBar*/
+
+.sidebar {
+    position: fixed;
+    width: 11%;
+    height: 60vh;
+    background: #312450;
+    font-size: 0.65em;
+    margin-top: 20vh;
+    z-index: 100;
+    margin-left: 10px;
+}
+
+.nav {
+    position: relative;
+    margin-right: 10%;
+    text-align: right;
+    top: 45%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    padding-left: 10%;
+}
+
+.nav ul li {
+    position: relative;
+    margin: 3.2em 0;
+}
+
+.nav ul li a {
+    line-height: 5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    color: rgba(255, 255, 255, 0.35);
+    display: block;
+    transition: all ease-out 300ms;
+}
+
+.nav ul li.active a {
+    color: white;
+}
+
+.nav ul li:not(.active)::after {
+    opacity: 0.2;
+}
+
+.nav ul li:not(.active):hover a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    left: 0;
+    bottom: 0;
+    background: black linear-gradient(to right, #5e42a6, #b74e91);
+}
+
+
+/*welcome page*/
+
+
+.welcome {
+    position: relative;
+    width: 100%;
+    float: right;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.welcome p {
+    font-size: 25px;
+    color: #fff;
+    margin: 10px;
+    font-weight: lighter;
+}
+
+.welcome p:first-of-type {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+hr {
+    width: 55%;
+    transform: scaleY(0.5);
+    opacity: 0.75;
+}
+
+
+
+/*profile Page*/
+
+.profile {
+    position: relative;
+    width: 100%;
+    float: right;
+    height: 100vh;
+    background-color: white;
+}
+
+.profile .container p:nth-child(2) {
+    color: #727878;
+}
+
+.profile .container h2 {
+    color: #5e42a6;
+    font-size: 54px;
+    font-weight: 300;
+}
+
+.profile p, h2 {
+    font-size: 25px;
+    margin: 8px;
+    font-weight: 200;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 55%;
+}
+
+.col {
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+.col h3 {
+    font-weight: 300;
+    color: #5e42a6;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.col p {
+    font-size: 15px;
+    line-height: 1.64;
+    margin: 0;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.profile .photo {
+    border-radius: 50%;
+    border: 10px #5e42a6 solid;
+    margin-top: 45px;
+    width: 180px;
+    height: 180px;
+}
+
+.profile .resume {
+    text-decoration: none;
+    color: #727878;
+}
+
+.profile .resume:hover {
+    color: black;
+}
+
+
+
+/*experiences page*/
+
+.experiences {
+    position: relative;
+    width: 100%;
+    float: right;
+    height: 100vh;
+    background-color: #ddd8ea;
+}
+
+.experiences .container h2 {
+    color: #5e42a6;
+    font-size: 56px;
+    font-weight: 200;
+}
+
+.experiences .container h3 {
+    color: #5e42a6;
+    font-weight: 300;
+    font-size: 28px;
+    width: 55%;
+    margin: 20px 0;
+}
+
+.educations {
+    width: 55%;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 30px;
+}
+
+.experience h4 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.experience p {
+    font-size: 15px;
+    line-height: 1.64;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.experience p > strong {
+    margin: 10px 0;
+    display: block;
+}
+
+.experience p > span:last-child {
+    color: #5e42a6;
+    font-size: 15px;
+    font-weight: 200;
+    display: block;
+    margin-top: 6px;
+}
+
+
+/*projects page*/
+
+.projects {
+    position: relative;
+    width: 100%;
+    float: right;
+    height: 100vh;
+    background-color: white;
+}
+
+.projects .container h2 {
+    color: #5e42a6;
+    font-size: 56px;
+    font-weight: 200;
+}
+
+.projects .projectList {
+    width: 55%;
+}
+
+.projects .project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    margin-top: 30px;
+}
+
+.projects .container img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.projects .unShow {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+.projects p {
+    font-weight: 200;
+}
+
+.project1 img {
+    width: 100%;
+}
+
+.project1 a {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.project1 .openInNew {
+    width: 36px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform: translateX(-100%);
+}
+
+.project1 {
+    position: fixed;
+    z-index: 500;
+    background-color: #a893de;
+    width: 55%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 20%;
+    top: 25%;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project1 .close {
+    float: right;
+    border: none;
+    background-color: #ddd8ea;
+}
+
+.project1 .close:hover {
+    cursor: pointer;
+}
+
+.project1 .project1Photo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.projects .project1Info {
+    position: absolute;
+    top: 0;
+    background-color: #a48de0;
+    opacity: 0;
+    width: 88%;
+    height: 88%;
+    color: white;
+    padding: 20px;
+}
+
+.projects .col-6 {
+    position: relative;
+}
+
+.projects .project1Info:hover {
+    opacity: 90%;
+
+}
+
+.projects .project1Info hr {
+    width: 90%;
+    margin: 0;
+}
+
+.projects .project1Info h3 {
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/*contact page */
+
+.contact {
+    position: relative;
+    width: 100%;
+    float: right;
+    height: 100vh;
+    background-color: #ddd8ea;
+}
+
+.contact .container h2 {
+    color: #5e42a6;
+    font-size: 56px;
+    font-weight: 200;
+}
+
+.contact a {
+    display: block;
+    line-height: 32px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: #434242;
+    font-size: 20px;
+}
+
+.contact span {
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.contact li {
+    list-style-type: none;
+}
+
+.contact .contactInfo {
+    width: 50%;
+}
+
+.material-icons.purple {
+    color: #5e42a6;
+}
+
+.material-icons.white {
+    color: white;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-purple {
+    background-color: #ddd8ea;
+}
+
+
